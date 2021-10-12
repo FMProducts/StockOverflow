@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_10"
+    android:layout_marginTop="@dimen/margin_10"
+    android:layout_marginEnd="@dimen/margin_10"
+    app:cardCornerRadius="@dimen/card_radius_2"
+    app:cardUseCompatPadding="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:padding="@dimen/padding_5"
+        android:focusable="true">
+
+
+        <TextView
+            android:id="@+id/stock_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Members Exchange"
+            app:layout_constraintEnd_toStartOf="@id/item_arrow"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/stock_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_5"
+            app:layout_constraintEnd_toStartOf="@id/item_arrow"
+            app:layout_constraintTop_toBottomOf="@id/stock_name"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="exchange" />
+
+        <TextView
+            android:id="@+id/stock_url"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/item_arrow"
+            app:layout_constraintTop_toBottomOf="@id/stock_type"
+            tools:text="https://www.memx.com" />
+
+
+        <ImageView
+            android:id="@+id/item_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/image_description"
+            android:padding="@dimen/padding_10"
+            android:src="@drawable/arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
